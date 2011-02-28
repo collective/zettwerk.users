@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="zettwerk.users">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Zettwerk Users"
+      directory="profiles/default"
+      description='Extension profile for Zettwerk Users'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="Zettwerk Users"
+      directory="profiles/uninstall"
+      description="Removes Zettwerk Users"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure> 
