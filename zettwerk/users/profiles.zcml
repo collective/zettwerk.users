@@ -3,9 +3,16 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="zettwerk.users">
 
+  <!-- Register the import step -->
+  <genericsetup:importStep
+      name="zettwerk.users"
+      title="zettwerk.users special import handlers"
+      description="Adds action_icons on plone 3 setups"
+      handler="zettwerk.users.setuphandlers.setup_action_icons" />
+
   <genericsetup:registerProfile
       name="default"
-      title="Zettwerk Users"
+      title="Zettwerk Users default"
       directory="profiles/default"
       description='Extension profile for Zettwerk Users'
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -13,7 +20,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="Zettwerk Users"
+      title="Zettwerk Users uninstall"
       directory="profiles/uninstall"
       description="Removes Zettwerk Users"
       provides="Products.GenericSetup.interfaces.EXTENSION"
